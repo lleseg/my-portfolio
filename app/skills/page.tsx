@@ -41,8 +41,8 @@ export default function SkillsPage() {
                   key={skill.name}
                   className={
                     skill.highlighted
-                      ? "rounded-sm border border-transparent px-3 py-1 text-sm font-medium bg-[var(--foreground)] text-[var(--background)] dark:bg-[#3D3A35] dark:text-white dark:border-white/15"
-                      : "rounded-sm border border-transparent px-3 py-1 text-sm font-medium bg-[var(--muted-bg)] text-[var(--muted)] dark:bg-[#2E2C28] dark:text-[#C0BAB2] dark:border-white/15"
+                      ? "rounded-sm border border-transparent px-3 py-1 text-sm font-medium bg-[var(--foreground)] text-[var(--background)] dark:bg-[#D6D0C8] dark:text-[var(--background)] dark:border-transparent"
+                      : "rounded-sm border border-zinc-400 px-3 py-1 text-sm font-medium bg-[var(--muted-bg)] text-zinc-700 dark:border-white/15 dark:bg-[#2E2C28] dark:text-[#C0BAB2]"
                   }
                 >
                   {skill.name}

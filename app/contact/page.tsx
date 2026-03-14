@@ -55,7 +55,7 @@ export default function ContactPage() {
               style={{ color: "var(--muted)" }}
             >
               <span
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-[var(--muted-bg)] text-[var(--bronze)] transition-colors duration-200 group-hover:bg-[var(--bronze)] group-hover:text-white dark:bg-[#2E2C28] dark:text-[#C4A882]"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-zinc-200 text-zinc-700 transition-colors duration-200 group-hover:bg-[var(--bronze)] group-hover:text-white dark:bg-[#2E2C28] dark:text-[var(--bronze-hover)]"
               >
                 <Icon size={18} strokeWidth={1.5} />
               </span>

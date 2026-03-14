@@ -44,7 +44,7 @@ export function ExperienceEntry({ entry }: Props) {
           {entry.skills.map((skill) => (
             <li
               key={skill}
-              className="rounded-sm border border-transparent px-2.5 py-0.5 text-xs font-medium bg-[var(--muted-bg)] text-[var(--muted)] dark:bg-[#2E2C28] dark:text-[#C0BAB2] dark:border-white/15"
+              className="rounded-sm border border-zinc-400 px-2.5 py-0.5 text-xs font-medium bg-[var(--muted-bg)] text-zinc-700 dark:border-white/15 dark:bg-[#2E2C28] dark:text-[#C0BAB2]"
             >
               {skill}
             </li>
