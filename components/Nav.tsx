@@ -1,26 +1,51 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/", label: "About" },
-  { href: "/projects", label: "Projects" },
   { href: "/experience", label: "Experience" },
   { href: "/skills", label: "Skills" },
   { href: "/contact", label: "Contact" },
 ];
 
 export function Nav() {
+  const pathname = usePathname();
+
   return (
-    <header className="border-b border-black/[.08] dark:border-white/[.08]">
-      <nav className="mx-auto flex max-w-3xl items-center gap-6 px-6 py-4">
-        {links.map(({ href, label }) => (
-          <Link
-            key={href}
-            href={href}
-            className="text-sm text-zinc-600 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors"
-          >
-            {label}
-          </Link>
-        ))}
+    <header style={{ borderBottom: "1px solid var(--border)" }}>
+      <nav className="mx-auto flex max-w-[900px] items-center justify-between px-8 py-5">
+        <Link
+          href="/"
+          className="font-[family-name:var(--font-playfair)] text-xl font-bold italic tracking-tight"
+          style={{ color: "var(--foreground)" }}
+        >
+          FDN
+        </Link>
+        <ul className="flex items-center gap-8">
+          {links.map(({ href, label }) => {
+            const active = pathname === href;
+            return (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className={`text-sm transition-colors duration-200 ${
+                    active
+                      ? "font-medium underline underline-offset-4 decoration-[var(--bronze)]"
+                      : "hover:text-[var(--foreground)]"
+                  }`}
+                  style={{
+                    color: active ? "var(--foreground)" : "var(--muted)",
+                    textDecorationColor: active ? "var(--bronze)" : undefined,
+                  }}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </nav>
     </header>
   );

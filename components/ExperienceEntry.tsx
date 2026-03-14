@@ -6,25 +6,52 @@ interface Props {
 
 export function ExperienceEntry({ entry }: Props) {
   return (
-    <li className="relative pl-6 before:absolute before:left-0 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-zinc-300 before:dark:bg-zinc-600">
-      <p className="text-xs text-zinc-400 dark:text-zinc-500">{entry.period}</p>
-      <h2 className="mt-0.5 font-semibold text-zinc-950 dark:text-zinc-50">
-        {entry.role}
-      </h2>
-      <p className="text-sm text-zinc-500 dark:text-zinc-400">{entry.company}</p>
-      <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-        {entry.description}
-      </p>
-      <ul className="mt-3 flex flex-wrap gap-1.5">
-        {entry.skills.map((skill) => (
-          <li
-            key={skill}
-            className="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
-          >
-            {skill}
-          </li>
-        ))}
-      </ul>
+    <li
+      className="relative grid gap-4 py-8 sm:grid-cols-[28%_1fr] sm:gap-8"
+      style={{ borderTop: "1px solid var(--border)" }}
+    >
+      {/* Left column — date + company */}
+      <div className="sm:pt-0.5">
+        <p
+          className="text-xs font-semibold uppercase tracking-wider"
+          style={{ color: "var(--muted)" }}
+        >
+          {entry.period}
+        </p>
+        <p
+          className="mt-1 text-sm font-medium"
+          style={{ color: "var(--bronze)" }}
+        >
+          {entry.company}
+        </p>
+      </div>
+
+      {/* Right column — role + description + tags */}
+      <div>
+        <h2
+          className="font-[family-name:var(--font-playfair)] text-xl font-semibold leading-snug"
+          style={{ color: "var(--foreground)" }}
+        >
+          {entry.role}
+        </h2>
+        <p
+          className="mt-2 text-sm leading-relaxed"
+          style={{ color: "var(--muted)" }}
+        >
+          {entry.description}
+        </p>
+        <ul className="mt-4 flex flex-wrap gap-1.5">
+          {entry.skills.map((skill) => (
+            <li
+              key={skill}
+              className="rounded-sm px-2.5 py-0.5 text-xs font-medium"
+              style={{ backgroundColor: "var(--muted-bg)", color: "var(--muted)" }}
+            >
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </div>
     </li>
   );
 }

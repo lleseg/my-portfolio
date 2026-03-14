@@ -2,25 +2,43 @@ import { skills } from "@/data/skills";
 
 export default function SkillsPage() {
   return (
-    <section className="mx-auto max-w-2xl px-6 py-20">
-      <h1 className="text-4xl font-semibold tracking-tight">Skills</h1>
-      <p className="mt-3 text-zinc-500 dark:text-zinc-400">
+    <section className="mx-auto max-w-[900px] px-8 py-24">
+      <p
+        className="mb-4 text-xs font-semibold uppercase tracking-[0.2em]"
+        style={{ color: "var(--bronze)" }}
+      >
+        Toolkit
+      </p>
+      <h1
+        className="font-[family-name:var(--font-playfair)] text-5xl font-bold leading-tight sm:text-6xl"
+        style={{ color: "var(--foreground)" }}
+      >
+        Skills
+      </h1>
+      <p className="mt-4 max-w-[60ch] text-base leading-relaxed" style={{ color: "var(--muted)" }}>
         Technologies and tools I&apos;ve worked with across my career.
       </p>
-      <div className="mt-12 flex flex-col gap-10">
+      <div className="mt-16 flex flex-col gap-12">
         {skills.map((category) => (
           <div key={category.name}>
-            <h2 className="mb-3 text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
-              {category.name}
-            </h2>
+            <div className="mb-5 flex items-center gap-5">
+              <h2
+                className="shrink-0 font-[family-name:var(--font-playfair)] text-2xl font-semibold italic"
+                style={{ color: "var(--foreground)" }}
+              >
+                {category.name}
+              </h2>
+              <div className="h-px flex-1" style={{ backgroundColor: "var(--border)" }} />
+            </div>
             <ul className="flex flex-wrap gap-2">
               {category.skills.map((skill) => (
                 <li
                   key={skill.name}
-                  className={
+                  className="rounded-sm px-3 py-1 text-sm font-medium"
+                  style={
                     skill.highlighted
-                      ? "rounded-full border border-zinc-400 bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-800 dark:border-zinc-500 dark:bg-zinc-800 dark:text-zinc-100"
-                      : "rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
+                      ? { backgroundColor: "var(--foreground)", color: "var(--background)" }
+                      : { backgroundColor: "var(--muted-bg)", color: "var(--muted)" }
                   }
                 >
                   {skill.name}
