@@ -29,6 +29,13 @@ export default function RootLayout({
       <body className={`${playfairDisplay.variable} ${dmSans.variable} antialiased`}>
         <Nav />
         <main>{children}</main>
+        <footer style={{ borderTop: "1px solid var(--border)" }}>
+          <div className="mx-auto max-w-[900px] px-8 py-6">
+            <p className="text-xs" style={{ color: "var(--muted)" }}>
+              © 2026 Franco De Nardo
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   );
