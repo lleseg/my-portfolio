@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Franco De Nardo — About",
+};
 
 export default function HomePage() {
   return (

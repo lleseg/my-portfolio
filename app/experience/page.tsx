@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import { ExperienceEntry } from "@/components/ExperienceEntry";
+
+export const metadata: Metadata = {
+  title: "Franco De Nardo — Experience",
+};
 import { experience } from "@/data/experience";
 
 export default function ExperiencePage() {

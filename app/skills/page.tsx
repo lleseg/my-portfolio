@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import { skills } from "@/data/skills";
+
+export const metadata: Metadata = {
+  title: "Franco De Nardo — Skills",
+};
 
 export default function SkillsPage() {
   return (

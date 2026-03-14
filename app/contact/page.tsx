@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import { Github, Linkedin, Mail } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Franco De Nardo — Contact",
+};
 
 const links = [
   {
