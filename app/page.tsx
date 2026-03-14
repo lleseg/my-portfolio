@@ -43,8 +43,7 @@ export default function HomePage() {
         </Link>
         <Link
           href="/contact"
-          className="rounded-sm border px-6 py-3 text-sm font-medium transition-colors duration-200 hover:border-[var(--bronze)] hover:text-[var(--bronze)]"
-          style={{ borderColor: "var(--border)", color: "var(--foreground)" }}
+          className="rounded-sm border border-[var(--border)] px-6 py-3 text-sm font-medium text-[var(--foreground)] transition-colors duration-200 hover:border-[var(--bronze)] hover:text-[var(--bronze)] dark:border-white/60 dark:text-white"
         >
           Get in Touch
         </Link>

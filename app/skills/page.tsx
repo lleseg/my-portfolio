@@ -34,11 +34,10 @@ export default function SkillsPage() {
               {category.skills.map((skill) => (
                 <li
                   key={skill.name}
-                  className="rounded-sm px-3 py-1 text-sm font-medium"
-                  style={
+                  className={
                     skill.highlighted
-                      ? { backgroundColor: "var(--foreground)", color: "var(--background)" }
-                      : { backgroundColor: "var(--muted-bg)", color: "var(--muted)" }
+                      ? "rounded-sm border border-transparent px-3 py-1 text-sm font-medium bg-[var(--foreground)] text-[var(--background)] dark:bg-[#3D3A35] dark:text-white dark:border-white/15"
+                      : "rounded-sm border border-transparent px-3 py-1 text-sm font-medium bg-[var(--muted-bg)] text-[var(--muted)] dark:bg-[#2E2C28] dark:text-[#C0BAB2] dark:border-white/15"
                   }
                 >
                   {skill.name}
