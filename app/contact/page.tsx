@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 
 const links = [
   {
-    href: "mailto:fdenardo.utn@gmail.com",
+    href: "mailto:francodenardo@hotmail.com",
     icon: Mail,
     label: "Email",
-    sublabel: "fdenardo.utn@gmail.com",
+    sublabel: "francodenardo@hotmail.com",
   },
   {
     href: "https://www.linkedin.com/in/franco-de-nardo/",
