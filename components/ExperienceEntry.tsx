@@ -34,12 +34,24 @@ export function ExperienceEntry({ entry }: Props) {
         >
           {entry.role}
         </h2>
-        <p
-          className="mt-2 text-sm leading-relaxed"
-          style={{ color: "var(--muted)" }}
-        >
-          {entry.description}
-        </p>
+        {entry.description && (
+          <p
+            className="mt-2 text-sm leading-relaxed"
+            style={{ color: "var(--muted)" }}
+          >
+            {entry.description}
+          </p>
+        )}
+        {entry.highlights && (
+          <ul
+            className="mt-2 flex list-disc flex-col gap-1.5 pl-4 text-sm leading-relaxed marker:text-[var(--bronze)]"
+            style={{ color: "var(--muted)" }}
+          >
+            {entry.highlights.map((highlight) => (
+              <li key={highlight}>{highlight}</li>
+            ))}
+          </ul>
+        )}
         <ul className="mt-4 flex flex-wrap gap-1.5">
           {entry.skills.map((skill) => (
             <li
