@@ -4,7 +4,7 @@ Personal developer portfolio built with Next.js.
 
 ## Stack
 
-- [Next.js 15](https://nextjs.org) (App Router)
+- [Next.js 16](https://nextjs.org) (App Router)
 - [Tailwind CSS 4](https://tailwindcss.com)
 - [TypeScript](https://www.typescriptlang.org)
 - Fonts: [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) + [DM Sans](https://fonts.google.com/specimen/DM+Sans) via `next/font`
