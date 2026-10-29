@@ -69,4 +69,8 @@ export const skills: SkillCategory[] = [
       "Azure DevOps",
     ].map(s),
   },
+  {
+    name: "Spoken Languages",
+    skills: ["Spanish (Native)", "English (Full Professional)"].map(s),
+  },
 ];
