@@ -12,7 +12,7 @@ export default function HomePage() {
         className="animate-fade-up animation-delay-100 mb-6 text-xs font-semibold uppercase tracking-[0.2em]"
         style={{ color: "var(--bronze)" }}
       >
-        Full Stack Developer
+        Senior Full Stack Developer
       </p>
 
       <h1
@@ -33,9 +33,12 @@ export default function HomePage() {
         className="animate-fade-up animation-delay-400 max-w-[60ch] text-base leading-relaxed"
         style={{ color: "var(--muted)" }}
       >
-        I bring more than 10 years of IT experience to every project — specialized
-        in software analysis, development, and troubleshooting. I focus on every
-        detail to deliver quality solutions that meet each client&apos;s needs.
+        I have 10+ years of experience building software for regulated industries
+        like life sciences, fintech, and government. My core stack is Node.js,
+        TypeScript, and AWS: I design system integrations, data architectures, and
+        event-driven sync pipelines, and complement them with React and Ruby on
+        Rails. I&apos;m equally comfortable making architecture decisions and
+        shipping day-to-day implementation.
       </p>
 
       <div className="animate-fade-up animation-delay-500 mt-10 flex flex-wrap gap-4">

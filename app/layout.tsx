@@ -14,9 +14,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Franco De Nardo — Full Stack Developer",
+  title: "Franco De Nardo — Senior Full Stack Developer",
   description:
-    "Full Stack Developer with 10+ years of IT experience, specialized in software analysis, development, and troubleshooting.",
+    "Senior Full Stack Developer with 10+ years of experience building software for regulated industries like life sciences, fintech, and government.",
 };
 
 export default function RootLayout({
